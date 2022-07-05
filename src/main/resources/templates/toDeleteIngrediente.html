@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel=stylesheet href="base.css">
+	<title>Index</title>
+</head>
+
+<body>	
+
+	<h1>Ingrediente da rimuovere:</h1>
+	<div><span th:text="${ingrediente.nome}">basilico</span>
+		<span th:text="${ingrediente.origine}">italiana</span>
+		<span th:text="${ingrediente.descrizione}">pianta</span>  
+	</div>  
+	<div> <a href="ingrediente.html" th:href="@{'/deleteIngrediente'+'/'+${ingrediente.id}}" th:text="CONFERMA">CONFERMA</a>
+	</div>
+</body>
+
+</html>

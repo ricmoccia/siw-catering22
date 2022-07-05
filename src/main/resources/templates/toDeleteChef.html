@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel=stylesheet href="base.css">
+	<title>Index</title>
+</head>
+
+<body>	
+
+	<h1>Chef da rimuovere:</h1>
+	<div><span th:text="${chef.nome}">Paolo</span>
+		<span th:text="${chef.cognome}">Rossi</span>
+		<span th:text="${chef.nazionalita}">Italiano</span>  
+	</div>  
+	<div> <a href="persona.html" th:href="@{'/deleteChef'+'/'+${chef.id}}" th:text="CONFERMA">CONFERMA</a>
+	</div>
+</body>
+
+</html>

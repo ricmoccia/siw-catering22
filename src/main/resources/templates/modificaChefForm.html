@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel=stylesheet href="base.css">
+	<title>Chefs</title>
+</head>
+
+<body>
+	<form method="POST" th:action="@{/modificaChef/{id}(id=${chef.id})}" th:object="${chef}">
+		<div th:if="${#fields.hasGlobalErrors()}">
+			<p th:each="err : ${#fields.globalErrors()}" th:text="${err}"> errori </p>
+		</div>
+
+		<table>
+			<tbody>
+				<tr>
+					<td>Nome:</td>
+					<td>
+						<label>
+							<input th:field="*{nome}" th:value="*{nome}" type="text" />
+						</label>
+					</td>
+					<td><span th:errors="*{nome}" th:if="${#fields.hasErrors('nome')}">errore
+							nome</span></td>
+				</tr>
+				<tr>
+					<td>Cognome:</td>
+					<td>
+						<label>
+							<input th:field="*{cognome}" th:value="*{cognome}" type="text" />
+						</label>
+					</td>
+					<td><span  th:errors="*{cognome}" th:if="${#fields.hasErrors('cognome')}">errore
+							cognome</span></td>
+				</tr>
+				<tr>
+					<td>Nazionalita:</td>
+					<td><label>
+							<input th:field="*{nazionalita}" th:value="*{nazionalita}" type="text" />
+						</label>
+					</td>
+					<td><span th:errors="*{nazionalita}"
+							th:if="${#fields.hasErrors('nazionalita')}">errore
+							nazionalita</span></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div>
+			<span><a href="chef.html" th:href="@{'/modificaChef'+'/'+${chef.id}}"
+					th:text="CONFERMA">CONFERMA</a></span>
+		</div>
+	</form>
+
+
+</body>
+
+</html>

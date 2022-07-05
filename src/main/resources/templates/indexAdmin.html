@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel=stylesheet href="base.css">
+	<title>Index</title>
+</head>
+
+<body>	
+
+	<h2 class="welcome-text">Welcome to the administration interface of the Catering Service.</h2>
+
+	<table class="greyGridTable">
+		<tbody>
+			<tr>
+				<td>Ingredienti</td>
+				<td> <a class="button button1" href="/ingredienti" th:href="@{/ingredienti}"> show all </a></td>				
+				<td> <a class="button button2" href="/ingredienteForm" th:href="@{/ingredienteForm}"> add </a></td>				
+			</tr>
+			<tr>
+				<td>Piatti</td>
+				<td><a class="button button1" href="/piatti" th:href="@{/piatti}"> show all </a></td>
+				<td><a class="button button2" href="/piattoForm" th:href="@{/piattoForm}"> add </a></td>
+			</tr>
+			<tr>
+				<td>Chefs</td>
+				<td><a class="button button1" href="/chefs" th:href="@{/chefs}"> show all </a></td>
+				<td><a class="button button2" href="/chefForm" th:href="@{/chefForm}"> add </a></td>
+			</tr>
+			<tr>
+				<td>Buffets</td>
+				<td><a class="button button1" href="/buffets" th:href="@{/buffets}"> show all </a></td>
+				<td><a class="button button2" href="/buffetForm" th:href="@{/buffetForm}"> add </a></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+
+</html>

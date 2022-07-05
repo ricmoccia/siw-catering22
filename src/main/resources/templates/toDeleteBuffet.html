@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel=stylesheet href="base.css">
+	<title>Index</title>
+</head>
+
+<body>	
+
+	<h1>Buffet da rimuovere:</h1>
+	<div><span th:text="${buffet.nome}">matrimonio</span>
+		<span th:text="${buffet.descrizione}">carne</span>
+	</div>  
+	<div> <a href="buffet.html" th:href="@{'/deleteBuffet'+'/'+${buffet.id}}" th:text="CONFERMA">CONFERMA</a>
+	</div>
+</body>
+
+</html>
